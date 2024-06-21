@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Set a background color for the entire page */
+  }
+  
+  .container {
+    max-width: 800px; /* Set maximum width for content */
+    margin: 20px auto; /* Center the container horizontally with some top and bottom margin */
+    padding: 20px;
+    background-color: #fff; /* Set a background color for the container */
+    border-radius: 8px; /* Add rounded corners to the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box-shadow effect */
+  }
+
+  #logo{
+    max-width: 200px;
+    width: 100%;
+    margin: auto;
+    display: block;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block; /* Display labels as block elements */
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in input's total width */
+  }
+  
+  button[type="submit"]{
+    padding: 8px 16px;
+    background-color: #007bff; /* Set a background color for the button */
+    color: #fff; /* Set text color to white */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Add a smooth transition for background color change */
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3; /* Darken the background color on hover */
+  }
+
+  #nextButton{
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #f87b1b;
+    color: #fff;
+    transition: background-color 0.3s; /* Add a smooth transition for background color change */
+    display: inline;
+  }
+
+  #nextButton:hover{
+    background-color: #ce610e;
+  }
+  
+  #convertedHTML {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    overflow: auto; /* Add a scrollbar if content overflows */
+  }
+
+  .button{
+    margin-top: 30px;
+    display: inline;
+  }
+
+  #copy{
+    cursor: pointer;
+    padding: 5px 10px;
+  }
+
+  .center{
+    display: block;
+    text-align: center;
+  }
+
+  .copyWrapper {
+    position: relative;
+  }
+  
+  .copyButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+  }
+
+  .copyButton:hover{
+    background-color: #e0e0e0;
+  }
+
+  .copyButton:active{
+    background-color: #efefef;
+  }
+
+  .bugLink{
+    text-align: center;
+    display: block;
+  }
+
+  .hidden-toggles{
+    font-size: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 15px;
+    color: #777;
+    height: 0;
+    overflow: hidden;
+    display: block; /* Optionally, you can hide the element by default */
+    transition: height 0.5s; /* Optional: Add transition for smooth animation */
+  }
+
+  .input-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hidden-toggles label{
+    display: inline;
+
+  }
+
+  label{
+    margin: 0;
+  }
+
+  #more-options{
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 80%;
+    color: #999;
+  }
+
+  #more-options:hover{
+    color: #777;
+    transition: 0.2s;
+  }

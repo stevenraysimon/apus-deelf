@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>deElf Tool</title>
+  <link rel="stylesheet" href="style.css"> <!-- You can link your CSS file here for styling -->
+</head>
+
+<body>
+  <div class="container">
+    <img src="https://cdn.glitch.global/c305ee98-0b58-479c-8127-7446bf552f2d/logo-deElf.png?v=1712894798735" title="APUS deElf" id="logo">
+    <form id="urlForm">
+      <label for="url">Enter URL:</label>
+      <input type="text" id="url" name="url" required>
+      <div class="button center">
+        <button type="submit">Go</button> <!-- Primary button -->
+        <button type="button" id="nextButton">Next</button> <!-- Secondary button -->
+      </div>
+      <a href="#" title="hidden-links" id="more-options">More Options</a>
+      <div class="hidden-toggles" id="hidden-toggles">
+        <div class="input-flex">
+          <input type="checkbox" title="modals" id="modals"><label>Reverse modal links</label>
+        </div>
+      </div>
+    </form>
+    <div class="copyWrapper"><div class="copyButton" id="copyButton">Copy</div><div id="convertedHTML"></div></div> <!-- This is where the converted HTML will be displayed -->
+    <div class="button center">
+      <button id="copy">Copy</button>
+    </div>
+  </div>
+  <a class="bugLink" target="_blank" href="https://forms.office.com/r/NxGJvccVCH" title="Report a Bug">Report a Bug</a>
+  <script src="script.js"></script> <!-- You can link your JavaScript file here -->
+  <script>
+    var copyButton = document.getElementById('copy');
+    var copyButtonTop = document.getElementById('copyButton');
+    copyButton.addEventListener('click', function(){
+
+        //Select the text
+        selectText('convertedHTML');
+        document.execCommand('copy');
+
+    });//Copy Button click
+    copyButtonTop.addEventListener('click', function(){
+
+        //Select the text
+        selectText('convertedHTML');
+        document.execCommand('copy');
+
+    });//Copy Button click
+    function selectText(containerid) {
+        if (document.selection) { // IE
+            var range = document.body.createTextRange();
+            range.moveToElementText(document.getElementById(containerid));
+            range.select();
+        } else if (window.getSelection) {
+            var range = document.createRange();
+            range.selectNode(document.getElementById(containerid));
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+        }
+    }
+  </script>
+</body>
+
+</html>
